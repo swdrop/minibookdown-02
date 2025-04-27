@@ -5,16 +5,19 @@
 \documentclass[
   openany]{book}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -63,17 +66,17 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
-  pdftitle={A Mini Bookdown},
-  pdfauthor={Your Name},
+  pdftitle={Gotham FC at Washington Spirit Recap},
+  pdfauthor={Sarah Wardrop},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{A Mini Bookdown}
-\author{Your Name}
+\title{Gotham FC at Washington Spirit Recap}
+\author{Sarah Wardrop}
 \date{}
 
 \begin{document}
@@ -83,9 +86,6 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{create-your-open-textbook}{%
-\chapter{Create your open textbook}\label{create-your-open-textbook}}
-
-Hello, world!!!
+\chapter{This is a second attempt, made while troubleshooting an access permission issue.}\label{this-is-a-second-attempt-made-while-troubleshooting-an-access-permission-issue.}
 
 \end{document}
