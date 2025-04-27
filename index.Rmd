@@ -6,5 +6,5 @@ documentclass: book
 classoption: openany
 ---
 
-# Attempt 2
+Attempt 2
 (fingers crossed)
